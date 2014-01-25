@@ -1,0 +1,142 @@
+body{	
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+div#parentNav{		
+	position: fixed;
+	width:100%;
+	top:0px;
+	left:0px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid black;
+	-webkit-box-shadow: 2px 3px 17px #000000;	
+	-moz-box-shadow: 2px 3px 17px #000000;	
+	box-shadow: 2px 3px 17px #000000;
+	background-color:white;
+}
+div#content{
+	padding-top: 50px;
+
+}
+div#parentNav a{
+	text-decoration: none;
+	padding-right: 15px;
+	color:#057AAD;
+}
+div#parentNav a:link{
+	color:#c91a2e;
+}
+div#parentNav a:visited {
+	color:#057AAD;
+}
+div#parentNav a:hover{
+	color:#2D4A57;
+	text-decoration: none;
+}
+div#parentNav a:active  {color:yellow;}
+
+textarea#editor{
+	font-family: 'Courier New', Arial;
+	width: 100%;
+	margin-right: 5px;
+	height: 90%;
+	border:0px;
+}
+textarea:focus, input:focus{ 
+	border:0px;
+} 
+div#footer{
+	position:absolute;
+	bottom:0px;
+	width: 99%;
+	text-align: center;
+	color:#057AAD;
+	font-size: small;
+}
+div#downloadBox{
+	display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    margin:auto;
+	padding: 5px;
+	display: none;
+	box-shadow:         7px 7px 27px 0px rgba(50, 50, 50, 0.19);
+	background-color: white;
+}
+div#infoBox{
+	display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    margin:auto;
+	padding: 5px;
+	display: none;
+	box-shadow:         7px 7px 27px 0px rgba(50, 50, 50, 0.19);
+	border-radius: 20px;
+	text-align: center;
+	background-color: white;
+}
+div#StatusBox{
+	display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    margin:auto;
+	padding: 5px;
+	display: none;
+	box-shadow:         7px 7px 27px 0px rgba(50, 50, 50, 0.19);
+	border-radius: 20px;
+	text-align: center;
+	background-color: white;
+}
+div#errorBox{
+	display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    margin:auto;
+	background-color: darkred;
+	padding: 5px;
+	display: none;
+	box-shadow:         7px 7px 27px 0px rgba(50, 50, 50, 0.19);
+}
+p#quote{
+	font-family: Courier;
+	font-style: italic;
+	font-size: small;
+}
+div#downloadBox h2{
+	font-size: normal;
+	text-align: center;
+
+}
+div#statusText{
+	position:absolute;
+	bottom:0px;
+	width: 99%;
+	text-align: right;
+	color:#057AAD;
+	font-size: small;	
+	display: none;
+}
+span#AppName{	
+	font-size: 25px;
+	margin-left: 5px;
+	color:#057AAD;
+}

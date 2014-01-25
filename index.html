@@ -1,0 +1,72 @@
+<html ng-app="Paste.js" ng-controller="ServiceController" >
+<head >
+	<title> {{ APPNAME }} - {{ DocumentMeta.Title }}</title>
+	<script type="text/javascript" src ="./Lib/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./Lib/angular.min.js"></script>	
+	<script type="text/javascript" src = "./Core/paste.js"></script>
+	<script type="text/javascript" language="javascript" src="./Lib/jquery.sparkline.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="./Style/Style.css">
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./Lib/font-awesome/css/font-awesome.min.css">
+</head>
+<body >	
+	<script type="text/javascript">
+		jQuery.noConflict();	
+	</script>
+	<p id="status"  data-ng-init="getUrlParameters()"></p>
+	<div id = "parentNav">
+		<a id="AppName" ng-href = "index.html" ><span id="AppName"> <i class="fa fa-paste"></i> {{ APPNAME }} </span></a>
+		<a href = "" ng-click="showOrHideDownloadBox();"><i class="fa fa-hdd-o"></i> Download</a>
+		<a ng-href = "index.html" target="_blank"><i class="fa fa-plus"></i> New</a>
+		<a href = "" ng-click="showOrHideStatsBox()"><i class="fa fa-bar-chart-o"></i> Stats</a>
+		<a href = "" ng-click="showOrHideInfoBox()"><i class="fa fa-info"></i> Info</a>
+	</div>
+	<div id ="content">
+		<textarea ng-readonly="DocumentMeta.isReadOnly" id="editor" ng-click ="hideDownloadBox()" ng-model="DocumentMeta.Content" ng-change="setTitle()" ></textarea>
+	</div>
+	<div id="downloadBox">
+		<h3>Download this Pad</h3>
+		<p id ="quote">You can share this file using following links. 
+			<p id ="quote" ng-if="willDeletePad">
+				This pad will be deleteted within {{ PadDeletionDuration }} days.
+			</p> 
+			<p id ="quote" ng-if="!willDeletePad">
+				There is no lifetime limit for this pad.
+			</p> 
+		</p>
+		Link to Pad: <a href="index.html?pad={{DocumentMeta.Guid}}">index.html?pad={{DocumentMeta.Guid}}</a>
+		<p ng-if ="EditMode == true || DocumentMeta.isReadOnly == false">
+		Edit link to Pad: <a href="index.html?epad={{DocumentMeta.PrivateGuid}}">index.html?epad={{DocumentMeta.PrivateGuid}}</a>
+		</p>
+	</div>
+	<div id ="errorBox">
+		There was an error while saving your document. 
+		<p>
+		Please inform the software administrator about following message:
+		<p id ="quote">
+			{{ DocumentMeta.ErrorMessage }}
+		</p>
+	</div>
+		<div id="InfoBox">
+			<span id="AppName"> <i class="fa fa-paste"></i> {{ APPNAME }} </span>
+			<p>
+			{{ APPNAME }}
+			{{ APPVERSION }}		
+			<p id ="quote">
+				{{ APPNAME }} is a open source application which allows you to save and share texts and notices.</br>
+				Licence: See LICENSE for details
+			</p>
+		</div>
+		<div id="StatusBox">
+			<h3>Statistics</h3>
+			<h4>Created pads (last 7 days)</h4>
+			<div id ="stats">
+			</div>			
+		</p>
+		</div> 
+	<div id ="statusText">
+		<i class="fa fa-hdd-o"></i> {{StatusText}}
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Welcome to Paste.js!
+______         _         _     
+| ___ \       | |       (_)    
+| |_/ /_ _ ___| |_ ___   _ ___ 
+|  __/ _` / __| __/ _ \ | / __|
+| | | (_| \__ \ ||  __/_| \__ \
+\_|  \__,_|___/\__\___(_) |___/
+                       _/ |    
+                      |__/     
+
+Welcome to Paste.js!
+====================
+Paste is an slim web application to allow you to create fast texts (notices, lists, minutes...) and share them with a link.
+
+Paste.js uses Font awesome(http://fontawesome.io/), jQuery (http://jquery.com/), and Angular.js (http://angularjs.org/) 
+
+Installation
+============
+If you have an mysql server, you can use it to store the pad data. Open the file Core/datalayer.php and enter your user credentials at the line with "$connect = mysqli_connect("localhost", "root", "")"".
+
+After that, you have to create the database. You can do that for example by selecting dump.sql out of phpMyAdmin (or equivalent)

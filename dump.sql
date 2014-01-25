@@ -1,0 +1,11 @@
+START TRANSACTION;
+CREATE TABLE IF NOT EXISTS `Pads` (
+  `GUID` varchar(20) NOT NULL,
+  `PRIVATEGUID` varchar(20) NOT NULL,
+  `Content` text NOT NULL,
+  `Creation` datetime DEFAULT NULL,
+  PRIMARY KEY (`GUID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+INSERT INTO `Pads` (`GUID`, `PRIVATEGUID`, `Content`, `Creation`) VALUES
+('start', 'fawr3wq52354tzetw53', 'Welcome to Paste.js!\n______         _         _     \n| ___ \\       | |       (_)    \n| |_/ /_ _ ___| |_ ___   _ ___ \n|  __/ _` / __| __/ _ \\ | / __|\n| | | (_| \\__ \\ ||  __/_| \\__ \\\n\\_|  \\__,_|___/\\__\\___(_) |___/\n                       _/ |    \n                      |__/     \n\nWelcome to Paste.js!\n====================\nPaste is an slim web application to allow you to create fast texts (notices, lists, minutes...) and share them with a link.\n\n\nUsage\n=====\n\nYust start writing. \n\nClick on download to recieve your personal links to your pad. You can use the share link (readonly) or the edit link (read & write). Each time you click on download (depending that you are creating the pad ^^), the pad will be updated.\n\nLicense\n=======\nPaste.js is licensed under the terms and conditions of the MIT License\n\nCopyright (c) [2014] [squarerootfury]\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.', '2014-01-15 00:00:00');
+COMMIT;
